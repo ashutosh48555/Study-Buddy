@@ -1,0 +1,350 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/analyticsScrollView"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_gradient">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="16dp"
+        android:paddingBottom="80dp">
+
+        <!-- Gradient Analytics Headline in rounded card -->
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="24dp"
+            android:background="@android:color/white"
+            android:elevation="8dp"
+            app:cardCornerRadius="24dp">
+            <com.example.studybuddy.GradientTextView
+                android:id="@+id/analyticsHeadline"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Analytics"
+                android:textSize="32sp"
+                android:textStyle="bold"
+                android:gravity="center"
+                android:padding="20dp"/>
+        </com.google.android.material.card.MaterialCardView>
+
+        <!-- Total Study Time Card -->
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:background="@android:color/white"
+            android:elevation="8dp"
+            app:cardCornerRadius="24dp">
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:padding="20dp">
+                <ImageView
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:src="@drawable/ic_timer"
+                    android:contentDescription="Study Time Icon"
+                    android:layout_marginEnd="16dp"/>
+                <com.example.studybuddy.GradientTextView
+                    android:id="@+id/totalStudyTimeTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="0 min"
+                    android:textSize="28sp"
+                    android:textStyle="bold"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Total Study Time"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    android:layout_marginStart="12dp"
+                    android:textColor="#888888"/>
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <!-- Total Completed Tasks Card -->
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:background="@android:color/white"
+            android:elevation="8dp"
+            app:cardCornerRadius="24dp">
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:padding="20dp">
+                <ImageView
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:src="@drawable/ic_check_circle"
+                    android:contentDescription="Completed Tasks Icon"
+                    android:layout_marginEnd="16dp"/>
+                <com.example.studybuddy.GradientTextView
+                    android:id="@+id/completedTasksBigTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="0"
+                    android:textSize="28sp"
+                    android:textStyle="bold"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Completed Tasks"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    android:layout_marginStart="12dp"
+                    android:textColor="#888888"/>
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <!-- Pomodoro Sessions Completed Card -->
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="24dp"
+            android:background="@android:color/white"
+            android:elevation="8dp"
+            app:cardCornerRadius="24dp">
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:padding="20dp">
+                <ImageView
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:src="@drawable/ic_pomodoro"
+                    android:contentDescription="Pomodoro Icon"
+                    android:layout_marginEnd="16dp"/>
+                <com.example.studybuddy.GradientTextView
+                    android:id="@+id/pomodoroSessionsTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="0"
+                    android:textSize="28sp"
+                    android:textStyle="bold"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Pomodoro Sessions"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    android:layout_marginStart="12dp"
+                    android:textColor="#888888"/>
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <!-- Weekly Completion Chart -->
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:background="@android:color/white"
+            android:elevation="6dp">
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="16dp">
+
+                <com.example.studybuddy.GradientTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Weekly Completion"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    android:layout_marginBottom="8dp"/>
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="220dp">
+                    <com.github.mikephil.charting.charts.BarChart
+                        android:id="@+id/barChart"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"/>
+                    <LinearLayout
+                        android:id="@+id/barChartPlaceholder"
+                        android:orientation="vertical"
+                        android:gravity="center"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@android:color/white"
+                        android:visibility="gone"
+                        android:paddingTop="16dp"
+                        android:paddingBottom="16dp">
+                        <ImageView
+                            android:layout_width="96dp"
+                            android:layout_height="96dp"
+                            android:src="@drawable/ic_analytics_placeholder"
+                            android:alpha="0.5"
+                            android:layout_gravity="center"/>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Complete your first task to see your weekly progress!"
+                            android:textSize="16sp"
+                            android:textColor="#888888"
+                            android:gravity="center"
+                            android:layout_marginTop="12dp"
+                            android:layout_marginBottom="8dp"
+                            android:layout_gravity="center"/>
+                    </LinearLayout>
+                </FrameLayout>
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <!-- Task Categories Pie Chart -->
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:background="@android:color/white"
+            android:elevation="6dp">
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="16dp">
+
+                <com.example.studybuddy.GradientTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Task Categories"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    android:layout_marginBottom="8dp"/>
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="220dp">
+                    <com.github.mikephil.charting.charts.PieChart
+                        android:id="@+id/pieChart"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"/>
+                    <LinearLayout
+                        android:id="@+id/pieChartPlaceholder"
+                        android:orientation="vertical"
+                        android:gravity="center"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@android:color/white"
+                        android:visibility="gone"
+                        android:paddingTop="16dp"
+                        android:paddingBottom="16dp">
+                        <ImageView
+                            android:layout_width="96dp"
+                            android:layout_height="96dp"
+                            android:src="@drawable/ic_analytics_placeholder"
+                            android:alpha="0.5"
+                            android:layout_gravity="center"/>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Categorize and complete tasks to see your stats!"
+                            android:textSize="16sp"
+                            android:textColor="#888888"
+                            android:gravity="center"
+                            android:layout_marginTop="12dp"
+                            android:layout_marginBottom="8dp"
+                            android:layout_gravity="center"/>
+                    </LinearLayout>
+                </FrameLayout>
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <!-- Completion Trends Line Chart -->
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:background="@android:color/white"
+            android:elevation="6dp">
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="16dp">
+
+                <com.example.studybuddy.GradientTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Completion Trends"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    android:layout_marginBottom="8dp"/>
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="220dp">
+                    <com.github.mikephil.charting.charts.LineChart
+                        android:id="@+id/lineChart"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"/>
+                    <LinearLayout
+                        android:id="@+id/lineChartPlaceholder"
+                        android:orientation="vertical"
+                        android:gravity="center"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@android:color/white"
+                        android:visibility="gone"
+                        android:paddingTop="16dp"
+                        android:paddingBottom="16dp">
+                        <ImageView
+                            android:layout_width="96dp"
+                            android:layout_height="96dp"
+                            android:src="@drawable/ic_analytics_placeholder"
+                            android:alpha="0.5"
+                            android:layout_gravity="center"/>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Keep going! Your completion trends will appear here."
+                            android:textSize="16sp"
+                            android:textColor="#888888"
+                            android:gravity="center"
+                            android:layout_marginTop="12dp"
+                            android:layout_marginBottom="8dp"
+                            android:layout_gravity="center"/>
+                    </LinearLayout>
+                </FrameLayout>
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <!-- Pomodoro Stats -->
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:background="@android:color/white"
+            android:elevation="6dp">
+
+            <TextView
+                android:id="@+id/pomodoroStatsTextView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Pomodoro Stats: Loading..."
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:padding="20dp"
+                android:gravity="center"
+                android:textColor="@color/primaryColor"/>
+        </com.google.android.material.card.MaterialCardView>
+
+    </LinearLayout>
+</ScrollView>

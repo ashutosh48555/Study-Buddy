@@ -1,0 +1,46 @@
+
+[
+  {
+    "title": "Lofi Study Beats",
+    "artist": "StudyBeats",
+    "url": "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3",
+    "coverArtUrl": "https://picsum.photos/400/400?random=1",
+    "duration": "3:45"
+  },
+  {
+    "title": "Chill Workspace",
+    "artist": "LofiGirl",
+    "url": "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-2.mp3",
+    "coverArtUrl": "https://picsum.photos/400/400?random=2",
+    "duration": "4:12"
+  },
+  {
+    "title": "Midnight Coffee",
+    "artist": "ChillBeats",
+    "url": "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-3.mp3",
+    "coverArtUrl": "https://picsum.photos/400/400?random=3",
+    "duration": "3:28"
+  },
+  {
+    "title": "Rainy Day Focus",
+    "artist": "Ambiance",
+    "url": "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-4.mp3",
+    "coverArtUrl": "https://picsum.photos/400/400?random=4",
+    "duration": "4:05"
+  },
+  {
+    "title": "Deep Focus Flow",
+    "artist": "StudyBeats",
+    "url": "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-5.mp3",
+    "coverArtUrl": "https://picsum.photos/400/400?random=5",
+    "duration": "3:52"
+  },
+  {
+    "title": "Relaxed Evening",
+    "artist": "LofiGirl",
+    "url": "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-6.mp3",
+    "coverArtUrl": "https://picsum.photos/400/400?random=6",
+    "duration": "4:20"
+  }
+]
+

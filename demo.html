@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Multi-Source Lofi Music Player</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f0f0f0;
+        }
+        
+        #lofi-player {
+            background: white;
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        
+        h2 {
+            color: #333;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        
+        #current-track {
+            background: #f8f9fa;
+            padding: 15px;
+            border-radius: 5px;
+            margin-bottom: 20px;
+        }
+        
+        #track-info {
+            font-size: 18px;
+            font-weight: bold;
+            margin-bottom: 10px;
+            color: #555;
+        }
+        
+        #controls {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 20px;
+            flex-wrap: wrap;
+            align-items: center;
+        }
+        
+        button {
+            background: #007bff;
+            color: white;
+            border: none;
+            padding: 8px 16px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 14px;
+        }
+        
+        button:hover {
+            background: #0056b3;
+        }
+        
+        button:disabled {
+            background: #ccc;
+            cursor: not-allowed;
+        }
+        
+        #search-input {
+            padding: 8px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 14px;
+        }
+        
+        #playlist {
+            border-top: 1px solid #eee;
+            padding-top: 20px;
+        }
+        
+        .track-item {
+            background: #f8f9fa;
+            padding: 10px;
+            margin-bottom: 10px;
+            border-radius: 5px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .track-item p {
+            margin: 0;
+            flex: 1;
+        }
+        
+        .track-item button {
+            background: #28a745;
+            font-size: 12px;
+            padding: 5px 10px;
+        }
+        
+        .track-item button:hover {
+            background: #1e7e34;
+        }
+        
+        .source-section {
+            margin-bottom: 20px;
+        }
+        
+        .source-section h4 {
+            color: #007bff;
+            margin-bottom: 10px;
+        }
+        
+        .status-section {
+            background: #e9ecef;
+            padding: 15px;
+            border-radius: 5px;
+            margin-bottom: 20px;
+        }
+        
+        .status-item {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 5px;
+        }
+        
+        .loading {
+            text-align: center;
+            color: #666;
+            font-style: italic;
+        }
+        
+        .error {
+            color: #dc3545;
+            background: #f8d7da;
+            padding: 10px;
+            border-radius: 5px;
+            margin: 10px 0;
+        }
+    </style>
+</head>
+<body>
+    <div id="lofi-player">
+        <h2>🎵 Multi-Source Lofi Music Player</h2>
+        
+        <div id="current-track">
+            <div id="track-info">No track selected</div>
+            <audio id="audio-player" controls style="width: 100%;">
+                Your browser does not support the audio element.
+            </audio>
+        </div>
+        
+        <div id="controls">
+            <button onclick="loadTracks()">Load Tracks</button>
+            <button onclick="playNext()">Next Track</button>
+            <button onclick="checkLimits()">Check Limits</button>
+            <input type="text" id="search-input" placeholder="Search tracks..." />
+            <button onclick="searchMusic()">Search</button>
+            <button onclick="createPlaylist()">Create Mixed Playlist</button>
+        </div>
+        
+        <div id="status" class="status-section" style="display: none;">
+            <h4>API Status</h4>
+            <div id="status-content"></div>
+        </div>
+        
+        <div id="playlist"></div>
+    </div>
+
+    <script type="module">
+        // Note: In a real implementation, you would import these from your modules
+        // For this demo, we'll create simplified versions
+        
+        let currentPlaylist = [];
+        let currentTrackIndex = 0;
+        
+        // Mock API functions for demo purposes
+        // In real implementation, these would come from your multi-source service
+        
+        window.loadTracks = async function() {
+            showLoading('Loading tracks...');
+            
+            try {
+                // Simulate API call
+                await new Promise(resolve => setTimeout(resolve, 1000));
+                
+                // Mock track data
+                const tracks = [
+                    {
+                        id: 'jamendo_1',
+                        name: 'Midnight Rain',
+                        artist: 'Chill Beats',
+                        source: 'jamendo',
+                        streamUrl: 'https://example.com/track1.mp3'
+                    },
+                    {
+                        id: 'freesound_1',
+                        name: 'Coffee Shop Vibes',
+                        artist: 'Lofi Producer',
+                        source: 'freesound',
+                        streamUrl: 'https://example.com/track2.mp3'
+                    },
+                    {
+                        id: 'archive_1',
+                        name: 'Lazy Sunday',
+                        artist: 'Ambient Artist',
+                        source: 'archive',
+                        streamUrl: 'https://example.com/track3.mp3'
+                    }
+                ];
+                
+                currentPlaylist = tracks;
+                displayPlaylist(tracks);
+                showSuccess(`Loaded ${tracks.length} tracks`);
+                
+            } catch (error) {
+                showError('Failed to load tracks: ' + error.message);
+            }
+        };
+        
+        window.playNext = async function() {
+            if (currentPlaylist.length === 0) {
+                showError('No tracks loaded. Please load tracks first.');
+                return;
+            }
+            
+            const track = currentPlaylist[currentTrackIndex];
+            currentTrackIndex = (currentTrackIndex + 1) % currentPlaylist.length;
+            
+            document.getElementById('track-info').textContent = `${track.name} by ${track.artist} (${track.source})`;
+            
+            // Note: In real implementation, you would set the actual stream URL
+            // document.getElementById('audio-player').src = track.streamUrl;
+            
+            showSuccess(`Now playing: ${track.name}`);
+        };
+        
+        window.checkLimits = function() {
+            // Mock rate limit data
+            const status = {
+                jamendo: { used: 45, limit: 10000, available: true },
+                freesound: { used: 123, limit: 2000, available: true },
+                archive: { used: 5, limit: 'Unlimited', available: true },
+                youtube: { used: 89, limit: 100, available: true }
+            };
+            
+            displayStatus(status);
+        };
+        
+        window.searchMusic = async function() {
+            const query = document.getElementById('search-input').value;
+            if (!query) {
+                showError('Please enter a search term');
+                return;
+            }
+            
+            showLoading(`Searching for "${query}"...`);
+            
+            try {
+                // Simulate search
+                await new Promise(resolve => setTimeout(resolve, 800));
+                
+                const results = {
+                    jamendo: [
+                        { name: `${query} Vibes`, artist: 'Chill Artist', source: 'jamendo' }
+                    ],
+                    freesound: [
+                        { name: `${query} Ambient`, artist: 'Sound Creator', source: 'freesound' }
+                    ]
+                };
+                
+                displaySearchResults(results);
+                showSuccess(`Found results for "${query}"`);
+                
+            } catch (error) {
+                showError('Search failed: ' + error.message);
+            }
+        };
+        
+        window.createPlaylist = async function() {
+            showLoading('Creating mixed playlist...');
+            
+            try {
+                await new Promise(resolve => setTimeout(resolve, 1500));
+                
+                const mixedPlaylist = [
+                    { name: 'Chill Evening', artist: 'Jamendo Artist', source: 'jamendo' },
+                    { name: 'Ambient Sounds', artist: 'Freesound User', source: 'freesound' },
+                    { name: 'Public Domain Beat', artist: 'Archive Artist', source: 'archive' },
+                    { name: 'Lofi Hip Hop', artist: 'YouTube Creator', source: 'youtube' }
+                ];
+                
+                currentPlaylist = mixedPlaylist;
+                displayPlaylist(mixedPlaylist);
+                showSuccess(`Created mixed playlist with ${mixedPlaylist.length} tracks`);
+                
+            } catch (error) {
+                showError('Failed to create playlist: ' + error.message);
+            }
+        };
+        
+        function displayPlaylist(tracks) {
+            const playlistDiv = document.getElementById('playlist');
+            playlistDiv.innerHTML = '<h3>Current Playlist:</h3>';
+            
+            tracks.forEach((track, index) => {
+                const trackDiv = document.createElement('div');
+                trackDiv.className = 'track-item';
+                trackDiv.innerHTML = `
+                    <p>${index + 1}. "${track.name}" by ${track.artist} <span style="color: #666;">(${track.source})</span></p>
+                    <button onclick="playTrack('${track.name}', '${track.artist}', '${track.source}')">Play</button>
+                `;
+                playlistDiv.appendChild(trackDiv);
+            });
+        }
+        
+        function displaySearchResults(results) {
+            const playlistDiv = document.getElementById('playlist');
+            playlistDiv.innerHTML = '<h3>Search Results:</h3>';
+            
+            Object.entries(results).forEach(([source, tracks]) => {
+                const sourceDiv = document.createElement('div');
+                sourceDiv.className = 'source-section';
+                sourceDiv.innerHTML = `<h4>${source.toUpperCase()}</h4>`;
+                
+                tracks.forEach(track => {
+                    const trackDiv = document.createElement('div');
+                    trackDiv.className = 'track-item';
+                    trackDiv.innerHTML = `
+                        <p>"${track.name}" by ${track.artist}</p>
+                        <button onclick="playTrack('${track.name}', '${track.artist}', '${track.source}')">Play</button>
+                    `;
+                    sourceDiv.appendChild(trackDiv);
+                });
+                
+                playlistDiv.appendChild(sourceDiv);
+            });
+        }
+        
+        function displayStatus(status) {
+            const statusDiv = document.getElementById('status');
+            const statusContent = document.getElementById('status-content');
+            
+            statusContent.innerHTML = '';
+            
+            Object.entries(status).forEach(([source, info]) => {
+                const statusItem = document.createElement('div');
+                statusItem.className = 'status-item';
+                
+                const limitText = info.limit === 'Unlimited' ? 'Unlimited' : info.limit;
+                const percentage = info.limit === 'Unlimited' ? 0 : ((info.used / info.limit) * 100).toFixed(1);
+                const statusIcon = info.available ? '✅' : '❌';
+                
+                statusItem.innerHTML = `
+                    <span>${statusIcon} ${source.toUpperCase()}</span>
+                    <span>${info.used}/${limitText} used ${info.limit !== 'Unlimited' ? `(${percentage}%)` : ''}</span>
+                `;
+                
+                statusContent.appendChild(statusItem);
+            });
+            
+            statusDiv.style.display = 'block';
+        }
+        
+        window.playTrack = function(name, artist, source) {
+            document.getElementById('track-info').textContent = `${name} by ${artist} (${source})`;
+            showSuccess(`Selected: ${name}`);
+        };
+        
+        function showLoading(message) {
+            const playlistDiv = document.getElementById('playlist');
+            playlistDiv.innerHTML = `<div class="loading">${message}</div>`;
+        }
+        
+        function showSuccess(message) {
+            console.log('✅ ' + message);
+        }
+        
+        function showError(message) {
+            const playlistDiv = document.getElementById('playlist');
+            playlistDiv.innerHTML = `<div class="error">${message}</div>`;
+        }
+        
+        // Initialize on page load
+        document.addEventListener('DOMContentLoaded', function() {
+            showSuccess('Multi-Source Lofi Player initialized. Click "Load Tracks" to start!');
+        });
+    </script>
+</body>
+</html>

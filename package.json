@@ -1,0 +1,22 @@
+{
+  "name": "lofi-multi-source-player",
+  "version": "1.0.0",
+  "description": "Multi-source lofi music player with Firebase integration",
+  "main": "multi-source-music-service.js",
+  "type": "module",
+  "scripts": {
+    "start": "node multi-source-music-service.js",
+    "test": "node test-multi-source.js",
+    "test-sources": "node test-multi-source.js",
+    "upload": "node upload-lofi-tracks.js",
+    "populate-firebase": "node firebase-metadata-service.js"
+  },
+  "dependencies": {
+    "firebase": "^10.7.1",
+    "firebase-admin": "^12.0.0"
+  },
+  "devDependencies": {},
+  "keywords": ["firebase", "storage", "cdn", "audio", "lofi", "multi-source", "jamendo", "freesound", "archive"],
+  "author": "",
+  "license": "MIT"
+}

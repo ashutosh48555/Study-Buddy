@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="feedback_types">
+        <item>General Feedback</item>
+        <item>Bug Report</item>
+        <item>Feature Request</item>
+        <item>UI/UX Suggestion</item>
+        <item>Performance Issue</item>
+        <item>Other</item>
+    </string-array>
+</resources> 

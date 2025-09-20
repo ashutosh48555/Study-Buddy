@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_gradient_dark"
+    android:alpha="0.95">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="24dp"
+        app:cardCornerRadius="18dp"
+        app:cardElevation="6dp"
+        android:background="@android:color/white">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="24dp">
+
+            <com.example.studybuddy.GradientTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Share Your Feedback"
+                android:textSize="22sp"
+                android:textStyle="bold"
+                android:gravity="center"
+                android:layout_marginBottom="16dp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="We'd love to hear your thoughts about StudyBuddy! Your feedback helps us improve the app."
+                android:textSize="14sp"
+                android:textColor="#444"
+                android:layout_marginBottom="20dp"
+                android:gravity="center" />
+
+            <!-- Rating Section -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Rate your experience:"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:layout_marginBottom="8dp" />
+
+            <RatingBar
+                android:id="@+id/ratingBar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:numStars="5"
+                android:stepSize="1.0"
+                android:rating="5.0"
+                android:progressTint="@color/secondaryColor"
+                android:layout_marginBottom="16dp"
+                android:ratingBarStyle="?android:attr/ratingBarStyleSmall" />
+
+            <!-- Feedback Type -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Feedback Type:"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:layout_marginBottom="8dp" />
+
+            <Spinner
+                android:id="@+id/feedbackTypeSpinner"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:entries="@array/feedback_types"
+                android:background="@drawable/bg_gradient"
+                android:popupBackground="@color/primaryColor"
+                android:padding="12dp"
+                android:layout_marginBottom="16dp" />
+
+            <!-- Feedback Message -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Your Message:"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:layout_marginBottom="8dp" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp">
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/feedbackMessageEditText"
+                    android:layout_width="match_parent"
+                    android:layout_height="120dp"
+                    android:hint="Tell us what you think about StudyBuddy..."
+                    android:inputType="textMultiLine"
+                    android:gravity="top|start"
+                    android:textColor="@color/primaryTextColor"
+                    android:textColorHint="@color/primaryTextColor"
+                    android:maxLines="5"/>
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <!-- Contact Info (Optional) -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Contact Info (Optional):"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:layout_marginBottom="8dp" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="24dp">
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/contactInfoEditText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Email or phone number (optional)"
+                    android:inputType="textEmailAddress"
+                    android:textColor="@color/primaryTextColor"
+                    android:textColorHint="@color/primaryTextColor"/>
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <!-- Submit Button -->
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/submitFeedbackButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Submit Feedback"
+                style="@style/Widget.MaterialComponents.Button"
+                app:cornerRadius="8dp"
+                android:layout_marginTop="8dp"/>
+
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+</ScrollView>

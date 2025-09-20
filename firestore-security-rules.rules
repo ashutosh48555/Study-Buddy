@@ -1,0 +1,40 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+    // Users can only access their own user document
+    match /users/{userId} {
+      allow read, write: if request.auth != null && request.auth.uid == userId;
+    }
+    
+    // Users can only access their own tasks
+    match /tasks/{taskId} {
+      allow read, write: if request.auth != null && (
+        // For existing documents
+        (resource.data.userId == request.auth.uid) ||
+        // For new documents (create)
+        (request.resource.data.userId == request.auth.uid)
+      );
+    }
+    
+    // Users can only access their own pomodoro sessions
+    match /pomodoro_sessions/{sessionId} {
+      allow read, write: if request.auth != null && (
+        (resource.data.userId == request.auth.uid) ||
+        (request.resource.data.userId == request.auth.uid)
+      );
+    }
+    
+    // Users can only access their own study goals
+    match /study_goals/{goalId} {
+      allow read, write: if request.auth != null && (
+        (resource.data.userId == request.auth.uid) ||
+        (request.resource.data.userId == request.auth.uid)
+      );
+    }
+    
+    // Deny all other access
+    match /{document=**} {
+      allow read, write: if false;
+    }
+  }
+}

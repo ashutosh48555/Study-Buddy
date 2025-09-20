@@ -1,0 +1,236 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_gradient_dark"
+    android:alpha="0.97">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_margin="24dp"
+        app:cardCornerRadius="20dp"
+        app:cardElevation="8dp"
+        android:background="@android:color/white">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="24dp">
+
+            <!-- Header with Animation -->
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="20dp">
+
+                <com.airbnb.lottie.LottieAnimationView
+                    android:id="@+id/headerAnimation"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:layout_gravity="center"
+                    app:lottie_rawRes="@raw/welcome_lottie"
+                    app:lottie_autoPlay="true"
+                    app:lottie_loop="true" />
+            </FrameLayout>
+
+            <com.example.studybuddy.GradientTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/feedback_title"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                android:gravity="center"
+                android:layout_marginBottom="12dp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/feedback_description"
+                android:textSize="15sp"
+                android:gravity="center"
+                android:lineSpacingExtra="4dp"
+                android:layout_marginBottom="24dp"
+                android:textColor="#444" />
+
+            <!-- Emoji Rating Section -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/feedback_emoji_rating"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:gravity="center"
+                android:layout_marginBottom="10dp"
+                android:textColor="@color/primaryTextColor" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center"
+                android:layout_marginBottom="20dp">
+
+                <!-- Use MaterialButton for chip-like look -->
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/emojiExcellent"
+                    style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="36dp"
+                    android:text="@string/feedback_emoji_excellent"
+                    android:textSize="14sp"
+                    android:layout_marginEnd="4dp"
+                    app:cornerRadius="18dp" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/emojiGood"
+                    style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="36dp"
+                    android:text="@string/feedback_emoji_good"
+                    android:textSize="14sp"
+                    android:layout_marginEnd="4dp"
+                    app:cornerRadius="18dp" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/emojiOkay"
+                    style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="36dp"
+                    android:text="@string/feedback_emoji_okay"
+                    android:textSize="14sp"
+                    android:layout_marginEnd="4dp"
+                    app:cornerRadius="18dp" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/emojiPoor"
+                    style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="36dp"
+                    android:text="@string/feedback_emoji_poor"
+                    android:textSize="14sp"
+                    android:layout_marginEnd="4dp"
+                    app:cornerRadius="18dp" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/emojiTerrible"
+                    style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="36dp"
+                    android:text="@string/feedback_emoji_terrible"
+                    android:textSize="14sp"
+                    app:cornerRadius="18dp" />
+            </LinearLayout>
+
+            <!-- Traditional Rating Section -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/feedback_rating"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:gravity="center"
+                android:layout_marginBottom="10dp"
+                android:textColor="@color/primaryTextColor" />
+
+            <RatingBar
+                android:id="@+id/ratingBar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:numStars="5"
+                android:stepSize="1.0"
+                android:rating="5.0"
+                android:progressTint="@color/secondaryColor"
+                android:layout_marginBottom="20dp"
+                android:ratingBarStyle="?android:attr/ratingBarStyleSmall" />
+
+            <!-- Feedback Type -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/feedback_type"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:gravity="center"
+                android:layout_marginBottom="10dp"
+                android:textColor="@color/primaryTextColor" />
+
+            <Spinner
+                android:id="@+id/feedbackTypeSpinner"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:entries="@array/feedback_types"
+                android:background="@drawable/bg_gradient"
+                android:popupBackground="@color/primaryColor"
+                android:padding="12dp"
+                android:layout_marginBottom="20dp" />
+
+            <!-- Feedback Message -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/feedback_message"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:gravity="center"
+                android:layout_marginBottom="10dp"
+                android:textColor="@color/primaryTextColor" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="20dp">
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/feedbackMessageEditText"
+                    android:layout_width="match_parent"
+                    android:layout_height="120dp"
+                    android:hint="@string/feedback_message_hint"
+                    android:inputType="textMultiLine"
+                    android:gravity="top|start"
+                    android:textColor="@color/primaryTextColor"
+                    android:textColorHint="@color/primaryTextColor"
+                    android:maxLines="5"/>
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <!-- Contact Info (Optional) -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/feedback_contact"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:gravity="center"
+                android:layout_marginBottom="10dp"
+                android:textColor="@color/primaryTextColor" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="24dp">
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/contactInfoEditText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/feedback_contact_hint"
+                    android:inputType="textEmailAddress"
+                    android:textColor="@color/primaryTextColor"
+                    android:textColorHint="@color/primaryTextColor"/>
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <!-- Submit Button -->
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/submitFeedbackButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/feedback_submit"
+                style="@style/Widget.MaterialComponents.Button"
+                app:cornerRadius="10dp"
+                android:layout_marginTop="8dp"/>
+
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+</ScrollView>

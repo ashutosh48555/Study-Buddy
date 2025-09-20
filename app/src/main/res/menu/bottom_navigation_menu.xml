@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/navigation_todo"
+        android:icon="@drawable/ic_todo_neon"
+        android:title="To-Do" />
+    <item
+        android:id="@+id/navigation_tasks"
+        android:icon="@drawable/ic_tasks"
+        android:title="Tasks" />
+    <item
+        android:id="@+id/navigation_pomodoro"
+        android:icon="@drawable/ic_pomodoro_neon"
+        android:title="Pomodoro" />
+    <item
+        android:id="@+id/navigation_analytics"
+        android:icon="@drawable/ic_analytics_neon"
+        android:title="Analytics" />
+    <item
+        android:id="@+id/navigation_profile"
+        android:icon="@drawable/ic_profile_neon"
+        android:title="Profile" />
+</menu>

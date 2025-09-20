@@ -1,0 +1,61 @@
+<resources>
+    <string name="app_name" translatable="false">StudyBuddy</string>
+    <string name="pomodoro_start" translatable="false">Start</string>
+    <string name="pomodoro_pause" translatable="false">Pause</string>
+    <string name="pomodoro_resume" translatable="false">Resume</string>
+    <string name="pomodoro_reset" translatable="false">Reset</string>
+    <string name="pomodoro_done" translatable="false">Done!</string>
+    <string name="pomodoro_work_mode" translatable="false">Work Time</string>
+    <string name="pomodoro_break_mode" translatable="false">Break Time</string>
+    <string name="pomodoro_long_break_mode" translatable="false">Long Break Time</string>
+    <string name="pomodoro_streak" translatable="false">Streak: %1$d</string>
+    <string name="pomodoro_info" translatable="false">Focus for %1$d minutes, then take a %2$d-minute break</string>
+    <string name="pomodoro_settings" translatable="false">Settings</string>
+    <string name="pomodoro_session_complete" translatable="false">Session Complete!</string>
+    <string name="pomodoro_break_complete" translatable="false">Break Complete!</string>
+    <string name="pomodoro_sessions_count" translatable="false">Session %1$d/%2$d</string>
+    <string name="profile_name" translatable="false">Name: John Doe</string>
+    <string name="profile_email" translatable="false">Email: johndoe@email.com</string>
+    <string name="profile_year" translatable="false">Academic Year: 2nd Year</string>
+    <string name="profile_branch" translatable="false">Branch: Computer Science</string>
+    <string name="save" translatable="false">Save</string>
+    <string name="cancel" translatable="false">Cancel</string>
+    <string name="timer_settings" translatable="false">Timer Settings</string>
+    <string name="work_duration" translatable="false">Work Duration (minutes):</string>
+    <string name="short_break" translatable="false">Short Break (minutes):</string>
+    <string name="long_break" translatable="false">Long Break (minutes):</string>
+    <string name="sessions_before_long_break" translatable="false">Sessions before long break:</string>
+    <string name="sound_notifications" translatable="false">Sound Notifications</string>
+    <string name="feedback" translatable="false">Feedback</string>
+    <string name="feedback_title" translatable="false">Share Your Feedback</string>
+    <string name="feedback_description" translatable="false">We\'d love to hear your thoughts about StudyBuddy! Your feedback helps us improve the app.</string>
+    <string name="feedback_rating" translatable="false">Rate your experience:</string>
+    <string name="feedback_type" translatable="false">Feedback Type:</string>
+    <string name="feedback_message" translatable="false">Your Message:</string>
+    <string name="feedback_message_hint" translatable="false">Tell us what you think about StudyBuddy...</string>
+    <string name="feedback_contact" translatable="false">Contact Info (Optional):</string>
+    <string name="feedback_contact_hint" translatable="false">Email or phone number (optional)</string>
+    <string name="feedback_submit" translatable="false">Submit Feedback</string>
+    <string name="feedback_success" translatable="false">Thank you for your feedback!</string>
+    <string name="feedback_error" translatable="false">Failed to submit feedback. Please try again.</string>
+    <string name="feedback_required" translatable="false">Please provide a message for your feedback.</string>
+    <string name="feedback_submitting" translatable="false">Submitting Feedback...</string>
+    <string name="feedback_submitting_message" translatable="false">Please wait while we send your feedback to our team.</string>
+    <string name="feedback_thank_you" translatable="false">Thank You!</string>
+    <string name="feedback_success_message" translatable="false">Your feedback has been submitted successfully. We appreciate your input and will use it to make StudyBuddy even better!</string>
+    <string name="rate_app" translatable="false">Rate App</string>
+    <string name="close" translatable="false">Close</string>
+    <string name="feedback_emoji_rating" translatable="false">How was your experience?</string>
+    <string name="feedback_emoji_excellent" translatable="false">😍 Excellent</string>
+    <string name="feedback_emoji_good" translatable="false">😊 Good</string>
+    <string name="feedback_emoji_okay" translatable="false">😐 Okay</string>
+    <string name="feedback_emoji_poor" translatable="false">😞 Poor</string>
+    <string name="feedback_emoji_terrible" translatable="false">�� Terrible</string>
+    <string-array name="year_options">
+        <item>First Year</item>
+        <item>Second Year</item>
+        <item>Third Year</item>
+        <item>Fourth Year</item>
+    </string-array>
+    <string name="default_web_client_id">your-client-id-from-google-services.json</string>
+</resources>

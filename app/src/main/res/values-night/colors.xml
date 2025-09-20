@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="primaryColor">#BB86FC</color>
+    <color name="primaryLightColor">#EFB7FF</color>
+    <color name="primaryDarkColor">#8856C9</color>
+    <color name="secondaryColor">#03DAC5</color>
+    <color name="secondaryLightColor">#5ff2f4</color>
+    <color name="secondaryDarkColor">#00a894</color>
+    <color name="primaryTextColor">#FFFFFF</color>
+    <color name="secondaryTextColor">#FFFFFF</color>
+    <color name="dark_background">#121212</color>
+    <color name="light_background">#121212</color>
+    <color name="colorPrimary">#BB86FC</color>
+    <color name="colorPrimaryDark">#8856C9</color>
+    <color name="nav_item_selected_light">#6200EE</color>
+    <color name="nav_item_unselected_light">#757575</color>
+    <color name="nav_item_selected_dark">#18FFFF</color>
+    <color name="nav_item_unselected_dark">#B0BEC5</color>
+    <color name="bottom_nav_background">#22232A</color>
+    <color name="white">#FFFFFF</color>
+    <color name="starGold">#FFEB3B</color>
+    <color name="starUnselected">#BBBBBB</color>
+    <color name="hintTextColor">#BBBBBB</color>
+    <color name="inputBackgroundLight">#FFFFFF</color>
+    <color name="black">#000000</color>
+</resources>

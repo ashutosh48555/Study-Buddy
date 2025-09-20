@@ -1,0 +1,227 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!-- Background Image -->
+    <ImageView
+        android:id="@+id/bgImage"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:alpha="10"
+        android:background="@drawable/study12"
+        android:scaleType="fitStart" />
+
+    <!-- Forms Container -->
+    <LinearLayout
+        android:id="@+id/formContainer"
+        android:orientation="vertical"
+        android:layout_centerInParent="true"
+        android:padding="24dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="24dp">
+
+        <!-- Login Form -->
+        <LinearLayout
+            android:id="@+id/loginForm"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <EditText
+                android:id="@+id/etLoginEmail"
+                android:hint="Email"
+                android:textColorHint="#070707"
+                android:textSize="20sp"
+                android:background="@drawable/rounded_edittex"
+                android:inputType="textEmailAddress"
+                android:layout_marginBottom="12dp"
+                android:padding="9dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <EditText
+                    android:id="@+id/etLoginPassword"
+                    android:hint="Password"
+                    android:textSize="20sp"
+                    android:textColorHint="#070707"
+                    android:background="@drawable/rounded_edittex"
+                    android:inputType="textPassword"
+                    android:padding="9dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+                <ImageView
+                    android:id="@+id/ivToggleLoginPassword"
+                    android:src="@drawable/ic_eye"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginEnd="16dp" />
+            </RelativeLayout>
+
+            <Button
+                android:id="@+id/btnLogin"
+                android:text="Login"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp" />
+        </LinearLayout>
+
+        <!-- Signup Form -->
+        <LinearLayout
+            android:id="@+id/signupForm"
+            android:orientation="vertical"
+            android:visibility="gone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <EditText
+                android:id="@+id/etSignupName"
+                android:hint="Full Name"
+                android:background="@drawable/rounded_edittex"
+                android:padding="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <EditText
+                android:id="@+id/etSignupAge"
+                android:hint="Age"
+                android:background="@drawable/rounded_edittex"
+                android:inputType="number"
+                android:padding="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp" />
+
+            <Spinner
+                android:id="@+id/spinnerYear"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:background="@drawable/rounded_edittex"
+                android:layout_marginTop="8dp" />
+
+            <EditText
+                android:id="@+id/etSignupEmail"
+                android:hint="Email"
+                android:background="@drawable/rounded_edittex"
+                android:inputType="textEmailAddress"
+                android:padding="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp">
+
+                <EditText
+                    android:id="@+id/etSignupPassword"
+                    android:hint="Password"
+                    android:inputType="textPassword"
+                    android:background="@drawable/rounded_edittex"
+                    android:padding="10dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+                <ImageView
+                    android:id="@+id/ivToggleSignupPassword"
+                    android:src="@drawable/ic_eye"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginEnd="16dp" />
+            </RelativeLayout>
+
+            <Button
+                android:id="@+id/btnSignup"
+                android:text="Sign Up"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp" />
+        </LinearLayout>
+
+        <!-- Switch Button -->
+        <TextView
+            android:id="@+id/tvSwitchForm"
+            android:text="Don't have an account? Sign Up"
+            android:padding="10dp"
+
+            android:textColor="@color/dark_background"
+            android:gravity="center"
+            android:textSize="16sp"
+            android:background="@drawable/rounded_edittex"
+            android:layout_marginTop="16dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <!-- Google Login Custom Layout -->
+        <LinearLayout
+            android:id="@+id/btnGoogle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="10dp"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/rounded_edittex"
+            android:gravity="center_vertical">
+
+            <ImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_marginStart="20dp"
+                android:src="@drawable/ic_google"
+                android:contentDescription="Google logo" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Continue with Google"
+                android:layout_gravity="center"
+                android:textColor="#000000"
+                android:textSize="16sp"
+
+                android:layout_marginStart="20dp" />
+        </LinearLayout>
+
+        <!-- GitHub Login Custom Layout -->
+        <LinearLayout
+            android:id="@+id/btnGitHub"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="10dp"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/rounded_edittex"
+            android:gravity="center_vertical">
+
+            <ImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_marginStart="20dp"
+                android:src="@drawable/ic_github"
+                android:contentDescription="GitHub logo" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Continue with GitHub"
+                android:textColor="#000000"
+                android:textSize="16sp"
+                android:layout_marginStart="20dp" />
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+</RelativeLayout>

@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    app:cardCornerRadius="24dp"
+    app:cardElevation="12dp"
+    app:cardBackgroundColor="@color/white"
+    android:padding="0dp"
+    android:layout_margin="24dp">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="24dp">
+
+            <!-- Header -->
+            <TextView
+                android:id="@+id/feedbackHeader"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="We value your feedback!"
+                android:textSize="22sp"
+                android:textStyle="bold"
+                android:textColor="@color/primaryColor"
+                android:gravity="center"
+                android:layout_marginBottom="16dp"
+                android:fontFamily="sans-serif-medium" />
+
+            <!-- Star Rating -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Rate your experience"
+                android:textSize="16sp"
+                android:fontFamily="sans-serif-medium"
+                android:textStyle="normal"
+                android:textColor="@color/primaryTextColor"
+                android:gravity="center"
+                android:layout_marginBottom="8dp" />
+
+            <LinearLayout
+                android:id="@+id/starContainer"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center"
+                android:layout_gravity="center"
+                android:layout_marginBottom="20dp">
+                <!-- 5 Material stars will be added programmatically for best effect -->
+            </LinearLayout>
+
+            <!-- Feedback Type -->
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                app:boxBackgroundMode="none">
+                <com.google.android.material.textfield.MaterialAutoCompleteTextView
+                    android:id="@+id/feedbackTypeSpinner"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Feedback Type"
+                    android:textColor="@color/black"
+                    android:textColorHint="@color/hintTextColor"
+                    android:focusable="true"
+                    android:clickable="true"
+                    android:completionThreshold="1" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <!-- Feedback Message -->
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                android:hint="Your Message"
+                app:boxBackgroundMode="filled"
+                app:boxCornerRadiusTopStart="12dp"
+                app:boxCornerRadiusTopEnd="12dp"
+                app:boxCornerRadiusBottomStart="12dp"
+                app:boxCornerRadiusBottomEnd="12dp"
+                app:boxBackgroundColor="@color/inputBackgroundLight">
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/feedbackMessageEditText"
+                    android:layout_width="match_parent"
+                    android:layout_height="90dp"
+                    android:inputType="textMultiLine"
+                    android:gravity="top|start"
+                    android:textColor="@color/black"
+                    android:textColorHint="@color/hintTextColor"
+                    android:maxLines="5"/>
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <!-- Contact Info -->
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="24dp"
+                android:hint="Email or phone number (optional)"
+                app:boxBackgroundMode="filled"
+                app:boxCornerRadiusTopStart="12dp"
+                app:boxCornerRadiusTopEnd="12dp"
+                app:boxCornerRadiusBottomStart="12dp"
+                app:boxCornerRadiusBottomEnd="12dp"
+                app:boxBackgroundColor="@color/inputBackgroundLight">
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/contactInfoEditText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="textEmailAddress"
+                    android:textColor="@color/black"
+                    android:textColorHint="@color/hintTextColor" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <!-- Buttons -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center">
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/cancelButton"
+                    style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Cancel"
+                    android:textAllCaps="true"
+                    android:textColor="@color/primaryColor"
+                    android:layout_marginEnd="8dp"
+                    app:cornerRadius="8dp" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/submitButton"
+                    style="@style/Widget.MaterialComponents.Button"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Submit Feedback"
+                    android:textAllCaps="true"
+                    android:textColor="@color/white"
+                    app:backgroundTint="@color/primaryColor"
+                    app:cornerRadius="8dp" />
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+</com.google.android.material.card.MaterialCardView>
