@@ -85,7 +85,7 @@ Navigate through four main sections using the intuitive bottom navigation:
 
 ## 🛠️ Installation
 
-1. Download the APK from the [Releases](https://github.com/ashutosh48555/Studdy-Buddy/releases) section
+1. Download the APK from the [Releases](https://github.com/ashutosh48555/Study-Buddy/releases) section
 2. Install on your Android device (Android 7.0+ required)
 3. Launch the app and start your productivity journey!
 
@@ -129,9 +129,9 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ## 👨‍💻 Developer
 
-**Ashutosh**
+**Ashutosh, Yogita, Saransh, Devangi, Vivek**
 - GitHub: [@ashutosh48555](https://github.com/ashutosh48555)
-- Repository: [Study Buddy](https://github.com/ashutosh48555/Studdy-Buddy)
+- Repository: [Study Buddy](https://github.com/ashutosh48555/Study-Buddy)
 
 ## 🙏 Acknowledgments
 
