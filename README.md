@@ -330,7 +330,6 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 <table align="center">
   <tr>
     <td align="center">
-      <img src="https://via.placeholder.com/100x100/6c5ce7/ffffff?text=AS" alt="Ashutosh" width="100" style="border-radius: 50%;">
       <br><strong>Ashutosh</strong>
       <br>Lead Developer
       <br>
@@ -342,7 +341,6 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
       </a>
     </td>
     <td align="center">
-      <img src="https://via.placeholder.com/100x100/a29bfe/ffffff?text=YO" alt="Yogita" width="100" style="border-radius: 50%;">
       <br><strong>Yogita</strong>
       <br>UI/UX Developer
       <br>
@@ -354,7 +352,6 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
       </a>
     </td>
     <td align="center">
-      <img src="https://via.placeholder.com/100x100/fd79a8/ffffff?text=SA" alt="Saransh" width="100" style="border-radius: 50%;">
       <br><strong>Saransh</strong>
       <br>Backend Developer
       <br>
@@ -368,7 +365,6 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
   </tr>
   <tr>
     <td align="center">
-      <img src="https://via.placeholder.com/100x100/00b894/ffffff?text=DE" alt="Devangi" width="100" style="border-radius: 50%;">
       <br><strong>Devangi</strong>
       <br>Frontend Developer
       <br>
@@ -380,7 +376,6 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
       </a>
     </td>
     <td align="center">
-      <img src="https://via.placeholder.com/100x100/e17055/ffffff?text=VI" alt="Vivek" width="100" style="border-radius: 50%;">
       <br><strong>Vivek</strong>
       <br>Full Stack Developer
       <br>
@@ -392,7 +387,6 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
       </a>
     </td>
     <td align="center">
-      <img src="https://via.placeholder.com/100x100/74b9ff/ffffff?text=TEAM" alt="Team" width="100" style="border-radius: 50%;">
       <br><strong>Team</strong>
       <br>Collaboration
       <br>
