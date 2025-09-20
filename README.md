@@ -165,11 +165,63 @@ chmod +x verify-setup.sh
 ## 📸 Screenshots
 
 <div align="center">
-  <img src="app/src/main/res/drawable/study12.jpg" alt="Study Buddy Screenshot" width="200">
-  <img src="app/src/main/res/drawable/logo.png" alt="Study Buddy Logo" width="200">
+  <h3>🎨 Beautiful User Interface</h3>
+  <p>Experience the modern, intuitive design of Study Buddy</p>
 </div>
 
-*More screenshots coming soon - showcasing the beautiful interface*
+### 🔐 Authentication & Login
+<div align="center">
+  <img src="screenshots/login_screen.png" alt="Login Screen" width="250">
+  <p><em>Secure login with Google and GitHub integration</em></p>
+</div>
+
+### 📱 Main Application Screens
+<div align="center">
+  <table>
+    <tr>
+      <td align="center">
+        <img src="screenshots/tasks_screen.png" alt="Tasks Management" width="200">
+        <p><strong>Tasks</strong><br><em>Smart task management</em></p>
+      </td>
+      <td align="center">
+        <img src="screenshots/pomodoro_screen.png" alt="Pomodoro Timer" width="200">
+        <p><strong>Pomodoro Timer</strong><br><em>Focus with time management</em></p>
+      </td>
+    </tr>
+    <tr>
+      <td align="center">
+        <img src="screenshots/analytics_screen.png" alt="Analytics Dashboard" width="200">
+        <p><strong>Analytics</strong><br><em>Track your progress</em></p>
+      </td>
+      <td align="center">
+        <img src="screenshots/profile_screen.png" alt="User Profile" width="200">
+        <p><strong>Profile</strong><br><em>Personalize your experience</em></p>
+      </td>
+    </tr>
+  </table>
+</div>
+
+### ⚙️ Settings & Features
+<div align="center">
+  <table>
+    <tr>
+      <td align="center">
+        <img src="screenshots/timer_settings.png" alt="Timer Settings" width="200">
+        <p><strong>Timer Settings</strong><br><em>Customize your study sessions</em></p>
+      </td>
+      <td align="center">
+        <img src="screenshots/feedback_dialog.png" alt="Feedback System" width="200">
+        <p><strong>Feedback System</strong><br><em>Help us improve the app</em></p>
+      </td>
+    </tr>
+  </table>
+</div>
+
+### 🎉 User Experience
+<div align="center">
+  <img src="screenshots/thank_you_screen.png" alt="Thank You Screen" width="250">
+  <p><em>Seamless user experience with beautiful animations</em></p>
+</div>
 
 ## 🎨 App Flow
 
@@ -266,12 +318,97 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ## 👨‍💻 Development Team
 
-**Ashutosh, Yogita, Saransh, Devangi, Vivek**
+<div align="center">
+  <h3>Meet the Study Buddy Development Team</h3>
+  <p>Passionate developers creating the ultimate study companion</p>
+</div>
 
-- **GitHub**: [@ashutosh48555](https://github.com/ashutosh48555)
-- **Repository**: [Study Buddy](https://github.com/ashutosh48555/Study-Buddy)
-- **Issues**: [Report a Bug](https://github.com/ashutosh48555/Study-Buddy/issues)
-- **Discussions**: [Join the Community](https://github.com/ashutosh48555/Study-Buddy/discussions)
+<table align="center">
+  <tr>
+    <td align="center">
+      <img src="https://via.placeholder.com/100x100/6c5ce7/ffffff?text=AS" alt="Ashutosh" width="100" style="border-radius: 50%;">
+      <br><strong>Ashutosh</strong>
+      <br>Lead Developer
+      <br>
+      <a href="https://github.com/ashutosh48555" target="_blank">
+        <img src="https://img.shields.io/badge/GitHub-@ashutosh48555-181717?style=flat&logo=github" alt="GitHub">
+      </a>
+      <a href="https://linkedin.com/in/ashutosh48555" target="_blank">
+        <img src="https://img.shields.io/badge/LinkedIn-Connect-blue?style=flat&logo=linkedin" alt="LinkedIn">
+      </a>
+    </td>
+    <td align="center">
+      <img src="https://via.placeholder.com/100x100/a29bfe/ffffff?text=YO" alt="Yogita" width="100" style="border-radius: 50%;">
+      <br><strong>Yogita</strong>
+      <br>UI/UX Developer
+      <br>
+      <a href="https://github.com/yogita" target="_blank">
+        <img src="https://img.shields.io/badge/GitHub-@yogita-181717?style=flat&logo=github" alt="GitHub">
+      </a>
+      <a href="https://linkedin.com/in/yogita" target="_blank">
+        <img src="https://img.shields.io/badge/LinkedIn-Connect-blue?style=flat&logo=linkedin" alt="LinkedIn">
+      </a>
+    </td>
+    <td align="center">
+      <img src="https://via.placeholder.com/100x100/fd79a8/ffffff?text=SA" alt="Saransh" width="100" style="border-radius: 50%;">
+      <br><strong>Saransh</strong>
+      <br>Backend Developer
+      <br>
+      <a href="https://github.com/saransh" target="_blank">
+        <img src="https://img.shields.io/badge/GitHub-@saransh-181717?style=flat&logo=github" alt="GitHub">
+      </a>
+      <a href="https://linkedin.com/in/saransh" target="_blank">
+        <img src="https://img.shields.io/badge/LinkedIn-Connect-blue?style=flat&logo=linkedin" alt="LinkedIn">
+      </a>
+    </td>
+  </tr>
+  <tr>
+    <td align="center">
+      <img src="https://via.placeholder.com/100x100/00b894/ffffff?text=DE" alt="Devangi" width="100" style="border-radius: 50%;">
+      <br><strong>Devangi</strong>
+      <br>Frontend Developer
+      <br>
+      <a href="https://github.com/devangi" target="_blank">
+        <img src="https://img.shields.io/badge/GitHub-@devangi-181717?style=flat&logo=github" alt="GitHub">
+      </a>
+      <a href="https://linkedin.com/in/devangi" target="_blank">
+        <img src="https://img.shields.io/badge/LinkedIn-Connect-blue?style=flat&logo=linkedin" alt="LinkedIn">
+      </a>
+    </td>
+    <td align="center">
+      <img src="https://via.placeholder.com/100x100/e17055/ffffff?text=VI" alt="Vivek" width="100" style="border-radius: 50%;">
+      <br><strong>Vivek</strong>
+      <br>Full Stack Developer
+      <br>
+      <a href="https://github.com/vivek" target="_blank">
+        <img src="https://img.shields.io/badge/GitHub-@vivek-181717?style=flat&logo=github" alt="GitHub">
+      </a>
+      <a href="https://linkedin.com/in/vivek" target="_blank">
+        <img src="https://img.shields.io/badge/LinkedIn-Connect-blue?style=flat&logo=linkedin" alt="LinkedIn">
+      </a>
+    </td>
+    <td align="center">
+      <img src="https://via.placeholder.com/100x100/74b9ff/ffffff?text=TEAM" alt="Team" width="100" style="border-radius: 50%;">
+      <br><strong>Team</strong>
+      <br>Collaboration
+      <br>
+      <a href="https://github.com/ashutosh48555/Study-Buddy" target="_blank">
+        <img src="https://img.shields.io/badge/Repository-Study%20Buddy-181717?style=flat&logo=github" alt="Repository">
+      </a>
+    </td>
+  </tr>
+</table>
+
+<div align="center">
+  <h4>🔗 Quick Links</h4>
+  <p>
+    <a href="https://github.com/ashutosh48555/Study-Buddy/issues">Report a Bug</a>
+    ·
+    <a href="https://github.com/ashutosh48555/Study-Buddy/discussions">Join Discussion</a>
+    ·
+    <a href="https://github.com/ashutosh48555/Study-Buddy/pulls">Contribute</a>
+  </p>
+</div>
 
 ## 🙏 Acknowledgments
 
