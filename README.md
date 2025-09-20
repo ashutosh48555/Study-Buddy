@@ -56,13 +56,14 @@
 - 📱 Widget customization and home screen integration
 - 👥 Study group and collaboration features
 
-### 🎵 Music Integration
+### 🎵 Music Integration *(Coming Soon)*
 - 🎶 Lofi music streaming for enhanced focus
 - 🎵 Custom playlist creation and management
 - 🔊 Background music with timer integration
 - 🎧 Audio controls and volume management
 - 📻 Multiple music sources and streaming options
 - 🔄 Offline music support for uninterrupted study
+- ⏳ *This feature is currently in development and will be available in future updates*
 
 ## 🏗️ Technical Excellence
 
@@ -254,14 +255,17 @@ chmod +x verify-setup.sh
 
 ## 🔮 Future Enhancements
 
-- 📱 Home screen widgets for quick access
-- 🎮 Gamification elements and achievements
-- 📊 Advanced analytics with AI insights
+### 🚀 Coming Soon
+- 🎵 **Music Integration** - Lofi music streaming and custom playlists
+- 📱 **Home screen widgets** for quick access
+- 🎮 **Gamification elements** and achievements
+- 📊 **Advanced analytics** with AI insights
+
+### 🔮 Planned Features
 - 🤝 Study group collaboration features
 - 🔄 Data export and backup options
 - 🌍 Multi-language support
 - 📱 iOS version development
-- 🎵 Advanced music integration
 - 📚 Study material organization
 - 🏆 Social features and leaderboards
 
