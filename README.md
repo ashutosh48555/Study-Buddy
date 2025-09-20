@@ -345,7 +345,7 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
       <br>UI/UX Developer
       <br>
       <a href="https://github.com/yogita-0204" target="_blank">
-        <img src="https://img.shields.io/badge/GitHub-@yogita-0204-181717?style=flat&logo=github" alt="GitHub">
+        <img src="https://img.shields.io/badge/GitHub-@yogita-181717?style=flat&logo=github" alt="GitHub">
       </a>
       <a href="https://linkedin.com/in/yogita-yadav-7199b2353" target="_blank">
         <img src="https://img.shields.io/badge/LinkedIn-Connect-blue?style=flat&logo=linkedin" alt="LinkedIn">
