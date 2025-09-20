@@ -346,10 +346,10 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
       <br><strong>Yogita</strong>
       <br>UI/UX Developer
       <br>
-      <a href="https://github.com/yogita" target="_blank">
+      <a href="https://github.com/yogita-0204" target="_blank">
         <img src="https://img.shields.io/badge/GitHub-@yogita-181717?style=flat&logo=github" alt="GitHub">
       </a>
-      <a href="https://linkedin.com/in/yogita" target="_blank">
+      <a href="https://linkedin.com/in/yogita-yadav-7199b2353" target="_blank">
         <img src="https://img.shields.io/badge/LinkedIn-Connect-blue?style=flat&logo=linkedin" alt="LinkedIn">
       </a>
     </td>
