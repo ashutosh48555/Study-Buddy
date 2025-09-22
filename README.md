@@ -355,28 +355,28 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
       <br><strong>Saransh</strong>
       <br>Backend Developer
       <br>
-      <a href="https://github.com/saransh" target="_blank">
+      <a href="https://github.com/Saransh2005" target="_blank">
         <img src="https://img.shields.io/badge/GitHub-@saransh-181717?style=flat&logo=github" alt="GitHub">
       </a>
-      <a href="https://linkedin.com/in/saransh" target="_blank">
+      <a href="https://linkedin.com/in/saransh-singh-117055215" target="_blank">
         <img src="https://img.shields.io/badge/LinkedIn-Connect-blue?style=flat&logo=linkedin" alt="LinkedIn">
       </a>
     </td>
   </tr>
   <tr>
     <td align="center">
-      <br><strong>Devangi</strong>
+      <br><strong>Devangi Yadav</strong>
       <br>Frontend Developer
       <br>
-      <a href="https://github.com/devangi" target="_blank">
+      <a href="https://github.com/Devdiva0" target="_blank">
         <img src="https://img.shields.io/badge/GitHub-@devangi-181717?style=flat&logo=github" alt="GitHub">
       </a>
-      <a href="https://linkedin.com/in/devangi" target="_blank">
+      <a href="https://linkedin.com/in/devangi-yadav-152a3128b" target="_blank">
         <img src="https://img.shields.io/badge/LinkedIn-Connect-blue?style=flat&logo=linkedin" alt="LinkedIn">
       </a>
     </td>
     <td align="center">
-      <br><strong>Vivek</strong>
+      <br><strong>Vivek Dandotiya</strong>
       <br>Full Stack Developer
       <br>
       <a href="https://github.com/vivek" target="_blank">
